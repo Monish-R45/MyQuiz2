@@ -31,8 +31,8 @@ class Quiz {
   play(){
     //write code here to hide question elements
     question.hide();
-    input1.hide();
-    input2.hide();
+    question.input1.hide();
+    question.input2.hide();
 
     //write code to change the background color here
 
