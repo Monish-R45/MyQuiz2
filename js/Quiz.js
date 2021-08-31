@@ -45,7 +45,7 @@ class Quiz {
    }
 
     //call getContestantInfo( ) here
-    getContestantInfo();
+    getPlayerInfo();
 
 
     //write condition to check if contestantInfor is not undefined
