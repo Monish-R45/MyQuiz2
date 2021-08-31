@@ -54,7 +54,8 @@ class Quiz {
         fill("red")
         //text(allContestants[plr].name + ":" + allContestants[plr].answer)
       }
-      text(allContestants[plr].name + ":" + allContestants[plr].answer, 250, 300)
+      debug= debug+50
+      text(allContestants[plr].name + ":" + allContestants[plr].answer, 250, debug)
     }
     
   }
