@@ -33,7 +33,7 @@ class Quiz {
     question.hide();
    // question.input1.hide();
    // question.input2.hide();
-
+     
     //write code to change the background color here
     background('yellow')
     textSize("30")
@@ -42,15 +42,19 @@ class Quiz {
     //write code to show a heading for showing the result of Quiz
     Contestant.getPlayerInfo();
    if(allContestants !== undefined){
+     debugger;
+     var debug = 230
+     
     for(var plr in allContestants){
       var correctAns = "2";
       if(correctAns === allContestants[plr].answer){
         fill("Green")
-        text(allContestants[plr].name + ":" + allContestants[plr].answer)
+       // text(allContestants[plr].name + ":" + allContestants[plr].answer)
       }else{
         fill("red")
-        text(allContestants[plr].name + ":" + allContestants[plr].answer)
+        //text(allContestants[plr].name + ":" + allContestants[plr].answer)
       }
+      text(allContestants[plr].name + ":" + allContestants[plr].answer, 250, 300)
     }
     
   }
