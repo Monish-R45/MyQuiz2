@@ -1,6 +1,6 @@
 class Contestant {
   constructor(){
-    this.index = 0;
+    this.index = null;
     this.answer = 0;
     this.name = null;
   }
