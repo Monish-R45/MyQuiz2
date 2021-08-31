@@ -31,21 +31,33 @@ class Quiz {
   play(){
     //write code here to hide question elements
     question.hide();
-    question.input1.hide();
-    question.input2.hide();
+   // question.input1.hide();
+   // question.input2.hide();
 
     //write code to change the background color here
-
-    //write code to show a heading for showing the result of Quiz
-   if(allContestants !== undefined){
     background('yellow')
     textSize("30")
     noFill();
     text("Quiz Ended! here are the results",130,230)
+    //write code to show a heading for showing the result of Quiz
+    Contestant.getPlayerInfo();
+   if(allContestants !== undefined){
+    for(var plr in allContestants){
+      var correctAns = "2";
+      if(correctAns === allContestants[plr].answer){
+        fill("Green")
+        text(allContestants[plr].name + ":" + allContestants[plr].answer)
+      }else{
+        fill("red")
+        text(allContestants[plr].name + ":" + allContestants[plr].answer)
+      }
+    }
+    
+  }
    }
 
     //call getContestantInfo( ) here
-    getPlayerInfo();
+   
 
 
     //write condition to check if contestantInfor is not undefined
@@ -54,17 +66,6 @@ class Quiz {
     //write code to add a note here
 
     //write code to highlight contest who answered correctly
-    for(var plr in allContestants){
-      var correctAns = "2";
-      if(correctAns === allContestants[plr].answer){
-        fill("Green")
-        text(plr + ":" + answer)
-      }else{
-        fill("red")
-        text(plr + ":" + answer)
-      }
-    }
     
-  }
 
 }
